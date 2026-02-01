@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+   <!-- <script src="../Static/app.js" defer></script>-->
+    <script src="{{ url_for('static', filename='app.js') }}" defer></script>
+    <title>proyecto</title>
+</head>
+<body>
+     <nav class="navbar">
+        <div class="logo">SG LAVACAR</div>
+        
+        <ul class="nav-links">
+            <li><a href="#inicio">INICIO</a></li>
+           
+            <li><a href="#servicios">SERVICIO</a></li>
+            <li><a href="#contactos">CONTACTO</a></li>
+            <li><a href="#nosotros">NOSOTROS</a></li> 
+          </ul>
+          <button class="burger" type="button">
+            <span></span>
+            <span></span>
+            <span></span>
+            
+        </button>
+     </nav>
+     <header id="inicio" class="hero-section">
+      <h2>SG LAVACAR</h2>
+    <h1>UNA EXPERIENCIA UNICA</h1>
+    <p>Utilizando los mejores productos de calidad para el cuidado de tu vehiculo</p>
+    <a href="#servicios" class="btn-primary">Agendar Cita</a>
+    <a href="https://wa.me/+50660466869" class="float whatsapp" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<a href="https://www.facebook.com/people/SG-Lavacar-y-muflera/61561455096505/" class="float facebook" target="_blank">
+  <i class="fab fa-facebook-f"></i>
+</a>
+<a href="https://www.google.com/maps/place/SG+LAVACAR+Y+MUFLERA/@10.0927845,-84.2771743,17z/data=!3m1!4b1!4m6!3m5!1s0x8fa059af58108bfd:0xb7dacc29a67894de!8m2!3d10.0927845!4d-84.2771743!16s%2Fg%2F11w447x534?entry=ttu&g_ep=EgoyMDI2MDEyMC4wIKXMDSoASAFQAw%3D%3D" class="float maps" target="_blank">
+  <i class="fab fa-maps"></i>
+</a>
+     </header>
+     <main>
+    
+</section>
+        <section id="servicios" class="cards-container">
+        <h2>Nuestros servicios</h2>
+        <div class="cards">
+        <div class="card">
+        <h3>LAVADO</h3>
+        <p>En SG Lavacar ofrecemos un lavado completo que elimina suciedad, polvo y grasa, dejando tu vehículo limpio y reluciente. Nuestro servicio incluye lavado exterior, limpieza de rines y llantas, aspirado interior y limpieza de superficies, utilizando productos de alta calidad que protegen la pintura y los acabados. Garantizamos un resultado impecable para que tu auto luzca como nuevo en cada visita.</p>
+        </div>
+        <div class="card">
+        <h3>PULIDO</h3>
+        <p>El pulido automotriz de SG Lavacar está diseñado para recuperar el brillo original de tu vehículo y mejorar notablemente su apariencia. Eliminamos rayones leves, manchas, opacidad y marcas causadas por el sol y el uso diario. Utilizamos productos profesionales y maquinaria especializada para pulir carrocería, faros y vidrios, logrando un acabado uniforme, brillante y protegido. Tu vehículo luce renovado, con una imagen limpia y elegante que marca la diferencia.</p>
+        </div>
+         <div class="card">
+        <h3>LIMPIEZA DE TAPICERIA</h3>
+        <p>En SG Lavacar realizamos una limpieza profunda de tapicería que elimina manchas, malos olores, polvo y bacterias, devolviendo frescura y comodidad al interior de tu vehículo. Trabajamos asientos, techo, alfombras y paneles de puertas utilizando productos especializados y técnicas seguras, cuidando cada material y color. El resultado es un interior limpio, renovado y con una sensación de higiene total para ti y tus acompañantes. </p>
+        </div>
+        </section>
+         
+        
+        <section id="contactos" class="contact-section">
+            <h2>contacto</h2>
+              <form id="contact-form" action="/enviar" method="POST">
+        <input type="text" name="nombre" placeholder="Nombre" required>
+        <input type="email" name="correo" placeholder="Correo Electrónico" required>
+        <textarea name="mensaje" placeholder="Mensaje" required></textarea>
+        <button type="submit">Enviar</button>
+    </form>
+         </section><s></s>
+         <div id="flash-messages" class="flash-messages"></div>
+
+          <section id="nosotros" class="about-section">
+    <div class="about-container">
+
+        <!-- Columna izquierda -->
+        <div class="about-box">
+            <h2>¿QUIÉNES SOMOS?</h2>
+            <p>
+                En SG Lavacar somos el ingrediente necesario para que tu vehículo luzca impecable.
+                Trabajamos con compromiso, experiencia y productos de alta calidad para brindar
+                un servicio profesional y confiable.
+            </p>
+            <p>
+                Cuidamos cada detalle del automóvil como si fuera nuestro, garantizando limpieza,
+                protección y un acabado que marca la diferencia.
+            </p>
+        </div>
+
+        <!-- Imagen central -->
+        <div class="about-image">
+          <img
+            src="{{ url_for('static', filename='img/giphy.gif') }}" 
+            
+            >
+        </div>
+
+        <!-- Columna derecha -->
+        <div class="about-box">
+            <h2>¿EN QUÉ CREEMOS?</h2>
+            <p>
+                Creemos que cada vehículo merece un trato especial. Por eso ofrecemos un servicio
+                eficiente, honesto y de calidad, enfocado en la satisfacción del cliente y en
+                resultados visibles desde el primer momento.
+            </p>
+        </div>
+
+    </div>
+     </main>
+     <footer>
+        <p>&copy; 2026 Todos los derechos reservados </p>
+     </footer>
+     
+</body>
+</html>
